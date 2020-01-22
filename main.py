@@ -51,7 +51,8 @@ def view_commands():
 
         for intents in data['data']:
             if intents['topic'] == topics[opt]:
-                print("\nCommand : ", intents['command'])
+                print("\nCommand : ", end=" ")
+                [print(x) for x in intents['command']]
                 print(f"Desc : {intents['short_desc']}...")
                 printlink(intents['links'])
         
